@@ -14,8 +14,7 @@ html_header="""
 <meta name="author" content="Larry Prato">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<h1 style="font-size:300%; color:#008080; font-family:Georgia"> SORTLY <br>
- <h2 style="color:#008080; font-family:Georgia"> Exec Dashboard</h3> <br>
+ <h2 style="font-size:300%; color:#008080; font-family:Georgia"> Sortly Exec Dashboard <br>
  <hr style= "  display: block;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -572,121 +571,121 @@ html_br="""
 """
 st.markdown(html_br, unsafe_allow_html=True)
 
-html_card_header6="""
-<div class="card">
-  <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 10px; width: 250px;
-   height: 50px;">
-    <h5 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 5px 0;">Cost Variance For Selected Discipline</h5>
-  </div>
-</div>
-"""
-html_card_footer6="""
-<div class="card">
-  <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #eef9ea; padding-top: 1rem;; width: 250px;
-   height: 50px;">
-    <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Montly Value </p>
-  </div>
-</div>
-"""
-html_card_header7="""
-<div class="card">
-  <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 5px; width: 250px;
-   height: 50px;">
-    <h5 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 8px 0;">Schedule Variance For Selected Discipline</h5>
-  </div>
-</div>
-"""
-html_card_footer7="""
-<div class="card">
-  <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #eef9ea; padding-top: 1rem;; width: 250px;
-   height: 50px;">
-    <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Montly Value</p>
-  </div>
-</div>
-"""
-html_card_header8="""
-<div class="card">
-  <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 5px; width: 550px;
-   height: 50px;">
-    <h5 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 10px 0;">Main Issues By Discipline</h5>
-  </div>
-</div>
-"""
+# html_card_header6="""
+# <div class="card">
+#   <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 10px; width: 250px;
+#    height: 50px;">
+#     <h5 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 5px 0;">Cost Variance For Selected Discipline</h5>
+#   </div>
+# </div>
+# """
+# html_card_footer6="""
+# <div class="card">
+#   <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #eef9ea; padding-top: 1rem;; width: 250px;
+#    height: 50px;">
+#     <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Montly Value </p>
+#   </div>
+# </div>
+# """
+# html_card_header7="""
+# <div class="card">
+#   <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 5px; width: 250px;
+#    height: 50px;">
+#     <h5 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 8px 0;">Schedule Variance For Selected Discipline</h5>
+#   </div>
+# </div>
+# """
+# html_card_footer7="""
+# <div class="card">
+#   <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #eef9ea; padding-top: 1rem;; width: 250px;
+#    height: 50px;">
+#     <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Montly Value</p>
+#   </div>
+# </div>
+# """
+# html_card_header8="""
+# <div class="card">
+#   <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 5px; width: 550px;
+#    height: 50px;">
+#     <h5 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 10px 0;">Main Issues By Discipline</h5>
+#   </div>
+# </div>
+# """
 
-html_list="""
-<ul style="color:#008080; font-family:Georgia; font-size: 15px">
-  <li>Nulla volutpat aliquam velit</li>
-  <li>Maecenas sed diam eget risus varius blandit</li>
-  <li>Etiam porta sem malesuada magna mollis euismod</li>
-  <li>Fusce dapibus, tellus ac cursus commodo</li>
-  <li>Maecenas sed diam eget risus varius blandit</li>
-</ul> 
-"""
+# html_list="""
+# <ul style="color:#008080; font-family:Georgia; font-size: 15px">
+#   <li>Nulla volutpat aliquam velit</li>
+#   <li>Maecenas sed diam eget risus varius blandit</li>
+#   <li>Etiam porta sem malesuada magna mollis euismod</li>
+#   <li>Fusce dapibus, tellus ac cursus commodo</li>
+#   <li>Maecenas sed diam eget risus varius blandit</li>
+# </ul> 
+# """
 
-### Block 6#########################################################################################
-with st.beta_container():
-    col1, col2, col3, col4, col5, col6, col7 = st.beta_columns([1,10,1,10,1,20,1])
-    with col1:
-        st.write("")
-    with col2:
-        st.markdown(html_card_header6, unsafe_allow_html=True)
-        fig_cv = go.Figure(go.Indicator(
-            mode="gauge+number+delta",
-            value=1.05,
-            number={"font": {"size": 22, 'color': "#008080", 'family': "Arial"}, "valueformat": "#,##0"},
-            domain={'x': [0, 1], 'y': [0, 1]},
-            gauge={
-                'axis': {'range': [None, 1.5], 'tickwidth': 1, 'tickcolor': "black"},
-                'bar': {'color': "#06282d"},
-                'bgcolor': "white",
-                'steps': [
-                    {'range': [0, 1], 'color': '#FF4136'},
-                    {'range': [1, 1.5], 'color': '#3D9970'}]}))
+# ### Block 6#########################################################################################
+# with st.beta_container():
+#     col1, col2, col3, col4, col5, col6, col7 = st.beta_columns([1,10,1,10,1,20,1])
+#     with col1:
+#         st.write("")
+#     with col2:
+#         st.markdown(html_card_header6, unsafe_allow_html=True)
+#         fig_cv = go.Figure(go.Indicator(
+#             mode="gauge+number+delta",
+#             value=1.05,
+#             number={"font": {"size": 22, 'color': "#008080", 'family': "Arial"}, "valueformat": "#,##0"},
+#             domain={'x': [0, 1], 'y': [0, 1]},
+#             gauge={
+#                 'axis': {'range': [None, 1.5], 'tickwidth': 1, 'tickcolor': "black"},
+#                 'bar': {'color': "#06282d"},
+#                 'bgcolor': "white",
+#                 'steps': [
+#                     {'range': [0, 1], 'color': '#FF4136'},
+#                     {'range': [1, 1.5], 'color': '#3D9970'}]}))
 
-        fig_cv.update_layout(paper_bgcolor="#fbfff0", font={'color': "#008080", 'family': "Arial"}, height=135, width=250,
-                             margin=dict(l=10, r=10, b=15, t=20))
-        st.plotly_chart(fig_cv)
-        st.markdown(html_card_footer6, unsafe_allow_html=True)
-    with col3:
-        st.write("")
-    with col4:
-        st.markdown(html_card_header7, unsafe_allow_html=True)
-        fig_sv = go.Figure(go.Indicator(
-            mode="gauge+number+delta",
-            value=0.95,
-            number={"font": {"size": 22, 'color': "#008080", 'family': "Arial"}, "valueformat": "#,##0"},
-            domain={'x': [0, 1], 'y': [0, 1]},
-            gauge={
-                'axis': {'range': [None, 1.5], 'tickwidth': 1, 'tickcolor': "black"},
-                'bar': {'color': "#06282d"},
-                'bgcolor': "white",
-                'steps': [
-                    {'range': [0, 1], 'color': '#FF4136'},
-                    {'range': [1, 1.5], 'color': '#3D9970'}]}))
-        fig_sv.update_layout(paper_bgcolor="#fbfff0", font={'color': "#008080", 'family': "Arial"}, height=135, width=250,
-                             margin=dict(l=10, r=10, b=15, t=20))
-        st.plotly_chart(fig_sv)
-        st.markdown(html_card_footer7, unsafe_allow_html=True)
-    with col5:
-        st.write("")
-    with col6:
-        st.markdown(html_card_header8, unsafe_allow_html=True)
-        st.markdown(html_list, unsafe_allow_html=True)
-    with col7:
-        st.write("")
+#         fig_cv.update_layout(paper_bgcolor="#fbfff0", font={'color': "#008080", 'family': "Arial"}, height=135, width=250,
+#                              margin=dict(l=10, r=10, b=15, t=20))
+#         st.plotly_chart(fig_cv)
+#         st.markdown(html_card_footer6, unsafe_allow_html=True)
+#     with col3:
+#         st.write("")
+#     with col4:
+#         st.markdown(html_card_header7, unsafe_allow_html=True)
+#         fig_sv = go.Figure(go.Indicator(
+#             mode="gauge+number+delta",
+#             value=0.95,
+#             number={"font": {"size": 22, 'color': "#008080", 'family': "Arial"}, "valueformat": "#,##0"},
+#             domain={'x': [0, 1], 'y': [0, 1]},
+#             gauge={
+#                 'axis': {'range': [None, 1.5], 'tickwidth': 1, 'tickcolor': "black"},
+#                 'bar': {'color': "#06282d"},
+#                 'bgcolor': "white",
+#                 'steps': [
+#                     {'range': [0, 1], 'color': '#FF4136'},
+#                     {'range': [1, 1.5], 'color': '#3D9970'}]}))
+#         fig_sv.update_layout(paper_bgcolor="#fbfff0", font={'color': "#008080", 'family': "Arial"}, height=135, width=250,
+#                              margin=dict(l=10, r=10, b=15, t=20))
+#         st.plotly_chart(fig_sv)
+#         st.markdown(html_card_footer7, unsafe_allow_html=True)
+#     with col5:
+#         st.write("")
+#     with col6:
+#         st.markdown(html_card_header8, unsafe_allow_html=True)
+#         st.markdown(html_list, unsafe_allow_html=True)
+#     with col7:
+#         st.write("")
 
-html_line="""
-<br>
-<br>
-<br>
-<br>
-<hr style= "  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 1.5px;">
-<p style="color:Gainsboro; text-align: right;">By: larryprato@gmail.com</p>
-"""
-st.markdown(html_line, unsafe_allow_html=True)
+# html_line="""
+# <br>
+# <br>
+# <br>
+# <br>
+# <hr style= "  display: block;
+#   margin-top: 0.5em;
+#   margin-bottom: 0.5em;
+#   margin-left: auto;
+#   margin-right: auto;
+#   border-style: inset;
+#   border-width: 1.5px;">
+# <p style="color:Gainsboro; text-align: right;">By: larryprato@gmail.com</p>
+# """
+# st.markdown(html_line, unsafe_allow_html=True)
