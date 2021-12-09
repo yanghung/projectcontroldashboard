@@ -103,15 +103,15 @@ with st.beta_container():
         fig_c2 = go.Figure(go.Indicator(
             mode="number+delta",
             value=73500,
-            number={'suffix': " MM", "font": {"size": 40, 'color': "#008080", 'family': "Arial"}, 'valueformat': ',f'},
+            number={'prefix': "$", "font": {"size": 40, 'color': "#008080", 'family': "Arial"}, 'valueformat': ',f'},
             delta={'position': "bottom", 'reference': 92700},
             domain={'x': [0, 1], 'y': [0, 1]}))
         fig_c2.update_layout(autosize=False,
                              width=350, height=90, margin=dict(l=20, r=20, b=20, t=30),
                              paper_bgcolor="#fbfff0", font={'size': 20})
-        fig_c2.update_traces(delta_decreasing_color="#3D9970",
-                             delta_increasing_color="#FF4136",
-                             delta_valueformat='f',
+        fig_c2.update_traces(delta_decreasing_color="#FF4136",
+                             delta_increasing_color="#3D9970",
+                             delta_valueformat=',f',
                              selector=dict(type='indicator'))
         st.plotly_chart(fig_c2)
         st.markdown(html_card_footer2, unsafe_allow_html=True)
@@ -128,8 +128,8 @@ with st.beta_container():
         fig_c3.update_layout(autosize=False,
                              width=350, height=90, margin=dict(l=20, r=20, b=20, t=30),
                              paper_bgcolor="#fbfff0", font={'size': 20})
-        fig_c3.update_traces(delta_decreasing_color="#3D9970",
-                             delta_increasing_color="#FF4136",
+        fig_c3.update_traces(delta_decreasing_color="#FF4136",
+                             delta_increasing_color="#3D9970",
                              delta_valueformat='.3f',
                              selector=dict(type='indicator'))
         st.plotly_chart(fig_c3)
