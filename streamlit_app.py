@@ -7,11 +7,11 @@ import pandas as pd
 
 html_header="""
 <head>
-<title>Sortly Dashboard</title>
+<title>Sortly CMO Dashboard</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
- <h2 style="font-size:300%; color:#008080; font-family:Georgia"> Sortly Exec Dashboard <br>
+ <h2 style="font-size:300%; color:#008080; font-family:Georgia"> Sortly CMO Dashboard <br>
  <hr style= "  display: block;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -87,7 +87,7 @@ with st.beta_container():
         st.markdown(html_card_header1, unsafe_allow_html=True)
         fig_c1 = go.Figure(go.Indicator(
             mode="number+delta",
-            value=11,
+            value=35,
             number={'suffix': "%", "font": {"size": 40, 'color': "#008080", 'family': "Arial"}},
             delta={'position': "bottom", 'reference': 46, 'relative': False},
             domain={'x': [0, 1], 'y': [0, 1]}))
@@ -103,7 +103,7 @@ with st.beta_container():
         fig_c2 = go.Figure(go.Indicator(
             mode="number+delta",
             value=73500,
-            number={'suffix': " HH", "font": {"size": 40, 'color': "#008080", 'family': "Arial"}, 'valueformat': ',f'},
+            number={'suffix': " MM", "font": {"size": 40, 'color': "#008080", 'family': "Arial"}, 'valueformat': ',f'},
             delta={'position': "bottom", 'reference': 92700},
             domain={'x': [0, 1], 'y': [0, 1]}))
         fig_c2.update_layout(autosize=False,
@@ -121,9 +121,9 @@ with st.beta_container():
         st.markdown(html_card_header3, unsafe_allow_html=True)
         fig_c3 = go.Figure(go.Indicator(
             mode="number+delta",
-            value=1.085,
+            value=2.83,
             number={"font": {"size": 40, 'color': "#008080", 'family': "Arial"}},
-            delta={'position': "bottom", 'reference': 1, 'relative': False},
+            delta={'position': "bottom", 'reference': 1.55, 'relative': False},
             domain={'x': [0, 1], 'y': [0, 1]}))
         fig_c3.update_layout(autosize=False,
                              width=350, height=90, margin=dict(l=20, r=20, b=20, t=30),
