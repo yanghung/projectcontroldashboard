@@ -111,7 +111,7 @@ with st.beta_container():
                              paper_bgcolor="#fbfff0", font={'size': 20})
         fig_c2.update_traces(delta_decreasing_color="#FF4136",
                              delta_increasing_color="#3D9970",
-                             number_prefix='$'
+                             number_prefix='$',
                              delta_valueformat=',f',
                              selector=dict(type='indicator'))
         st.plotly_chart(fig_c2)
