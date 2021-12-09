@@ -461,13 +461,13 @@ with st.beta_container():
         fig2.update_traces(marker_color='#17A2B8', selector=dict(type='bar'))
         st.plotly_chart(fig2)
 
-disciplinas= ['Civil', 'Mechanical', 'Piping', 'Electricity', 'Instrumentation', 'Commissioning']
+# disciplinas= ['Civil', 'Mechanical', 'Piping', 'Electricity', 'Instrumentation', 'Commissioning']
 
-selected_disc = st.selectbox(' Select discipline', disciplinas)
-html_br="""
-<br>
-"""
-st.markdown(html_br, unsafe_allow_html=True)
+# selected_disc = st.selectbox(' Select discipline', disciplinas)
+# html_br="""
+# <br>
+# """
+# st.markdown(html_br, unsafe_allow_html=True)
 
 # html_card_header4="""
 # <div class="card">
