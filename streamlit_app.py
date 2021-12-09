@@ -57,7 +57,7 @@ html_card_footer2="""
 <div class="card">
   <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #eef9ea; padding-top: 1rem;; width: 350px;
    height: 50px;">
-    <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Baseline 92.700</p>
+    <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Baseline $92,700</p>
   </div>
 </div>
 """
@@ -111,6 +111,7 @@ with st.beta_container():
                              paper_bgcolor="#fbfff0", font={'size': 20})
         fig_c2.update_traces(delta_decreasing_color="#FF4136",
                              delta_increasing_color="#3D9970",
+                             number_prefix='$'
                              delta_valueformat=',f',
                              selector=dict(type='indicator'))
         st.plotly_chart(fig_c2)
