@@ -7,11 +7,8 @@ import pandas as pd
 
 html_header="""
 <head>
-<title>PControlDB</title>
+<title>Sortly Dashboard</title>
 <meta charset="utf-8">
-<meta name="keywords" content="project control, dashboard, management, EVA">
-<meta name="description" content="project control dashboard">
-<meta name="author" content="Larry Prato">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
  <h2 style="font-size:300%; color:#008080; font-family:Georgia"> Sortly Exec Dashboard <br>
@@ -23,7 +20,7 @@ html_header="""
   border-style: inset;
   border-width: 1.5px;"></h1>
 """
-st.set_page_config(page_title="Sortly Executive Dashboard", page_icon="", layout="wide")
+st.set_page_config(page_title="Sortly CMO Dashboard", page_icon="", layout="wide")
 st.markdown('<style>body{background-color: #fbfff0}</style>',unsafe_allow_html=True)
 st.markdown(html_header, unsafe_allow_html=True)
 st.markdown(""" <style>
@@ -36,7 +33,7 @@ html_card_header1="""
 <div class="card">
   <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 5px; width: 350px;
    height: 50px;">
-    <h3 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Global Actual Progress</h3>
+    <h3 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">% Spend to Plan</h3>
   </div>
 </div>
 """
@@ -52,7 +49,7 @@ html_card_header2="""
 <div class="card">
   <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 5px; width: 350px;
    height: 50px;">
-    <h3 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Global Spend Hours</h3>
+    <h3 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Total Ad Spend</h3>
   </div>
 </div>
 """
@@ -68,7 +65,7 @@ html_card_header3="""
 <div class="card">
   <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 5px; width: 350px;
    height: 50px;">
-    <h3 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">TCPI</h3>
+    <h3 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">ROAS</h3>
   </div>
 </div>
 """
@@ -76,7 +73,7 @@ html_card_footer3="""
 <div class="card">
   <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #eef9ea; padding-top: 1rem;; width: 350px;
    height: 50px;">
-    <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">To Complete Performance Index ≤ 1.00</p>
+    <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Baseline 1.55</p>
   </div>
 </div>
 """
@@ -90,7 +87,7 @@ with st.beta_container():
         st.markdown(html_card_header1, unsafe_allow_html=True)
         fig_c1 = go.Figure(go.Indicator(
             mode="number+delta",
-            value=35,
+            value=11,
             number={'suffix': "%", "font": {"size": 40, 'color': "#008080", 'family': "Arial"}},
             delta={'position': "bottom", 'reference': 46, 'relative': False},
             domain={'x': [0, 1], 'y': [0, 1]}))
