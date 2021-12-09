@@ -469,107 +469,107 @@ html_br="""
 """
 st.markdown(html_br, unsafe_allow_html=True)
 
-html_card_header4="""
-<div class="card">
-  <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 10px; width: 250px;
-   height: 50px;">
-    <h5 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 5px 0;">Progress For Selected Discipline</h5>
-  </div>
-</div>
-"""
-html_card_footer4="""
-<div class="card">
-  <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #eef9ea; padding-top: 1rem;; width: 250px;
-   height: 50px;">
-    <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Montly Value (%)</p>
-  </div>
-</div>
-"""
-html_card_header5="""
-<div class="card">
-  <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 10px; width: 250px;
-   height: 50px;">
-    <h5 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 5px 0;">Spend Hours For Selected Discipline</h5>
-  </div>
-</div>
-"""
-html_card_footer5="""
-<div class="card">
-  <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #eef9ea; padding-top: 1rem;; width: 250px;
-   height: 50px;">
-    <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Montly Relative Change (%)</p>
-  </div>
-</div>
-"""
+# html_card_header4="""
+# <div class="card">
+#   <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 10px; width: 250px;
+#    height: 50px;">
+#     <h5 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 5px 0;">Progress For Selected Discipline</h5>
+#   </div>
+# </div>
+# """
+# html_card_footer4="""
+# <div class="card">
+#   <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #eef9ea; padding-top: 1rem;; width: 250px;
+#    height: 50px;">
+#     <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Montly Value (%)</p>
+#   </div>
+# </div>
+# """
+# html_card_header5="""
+# <div class="card">
+#   <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #eef9ea; padding-top: 10px; width: 250px;
+#    height: 50px;">
+#     <h5 class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 5px 0;">Spend Hours For Selected Discipline</h5>
+#   </div>
+# </div>
+# """
+# html_card_footer5="""
+# <div class="card">
+#   <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #eef9ea; padding-top: 1rem;; width: 250px;
+#    height: 50px;">
+#     <p class="card-title" style="background-color:#eef9ea; color:#008080; font-family:Georgia; text-align: center; padding: 0px 0;">Montly Relative Change (%)</p>
+#   </div>
+# </div>
+# """
 
 
-### Block 5#########################################################################################
-with st.beta_container():
-    col1, col2, col3, col4, col5, col6, col7 = st.beta_columns([1,10,1,10,1,20,1])
-    with col1:
-        st.write("")
-    with col2:
-        st.markdown(html_card_header4, unsafe_allow_html=True)
-        x = ['Actual', 'Previous', 'Average', 'Planned']
-        y = [5.5, 4.2, 6.3, 8.5]
-        fig_m_prog = go.Figure([go.Bar(x=x, y=y, text=y, textposition='auto')])
-        fig_m_prog.update_layout(paper_bgcolor="#fbfff0", plot_bgcolor="#fbfff0",
-                                 font={'color': "#008080", 'family': "Arial"}, height=100, width=250,
-                                 margin=dict(l=15, r=1, b=4, t=4))
-        fig_m_prog.update_yaxes(title='y', visible=False, showticklabels=False)
-        fig_m_prog.update_traces(marker_color='#17A2B8', selector=dict(type='bar'))
-        st.plotly_chart(fig_m_prog)
-        st.markdown(html_card_footer4, unsafe_allow_html=True)
-    with col3:
-        st.write("")
-    with col4:
-        st.markdown(html_card_header5, unsafe_allow_html=True)
-        x = ['Δ vs Prev', 'Δ vs Aver', 'Δ vs Plan']
-        y = [10, 12, 8]
-        fig_m_hh = go.Figure([go.Bar(x=x, y=y, text=y, textposition='auto')])
-        fig_m_hh.update_layout(paper_bgcolor="#fbfff0", plot_bgcolor="#fbfff0",
-                               font={'color': "#008080", 'family': "Arial"}, height=100, width=250,
-                               margin=dict(l=15, r=1, b=1, t=1))
-        fig_m_hh.update_yaxes(title='y', visible=False, showticklabels=False)
-        fig_m_hh.update_traces(marker_color='#17A2B8', selector=dict(type='bar'))
-        st.plotly_chart(fig_m_hh)
-        st.markdown(html_card_footer5, unsafe_allow_html=True)
-    with col5:
-        st.write("")
-    with col6:
-        y = data.loc[data.Activity_name == 'Total']
-        # Create traces
-        fig3 = go.Figure()
-        fig3.add_trace(go.Scatter(x=y['Date'], y=y['Progress'],
-                                  mode='lines',
-                                  name='Progress',
-                                  marker_color='#FF4136'))
-        fig3.add_trace(go.Scatter(x=y['Date'], y=y['Baseline'],
-                                  mode='lines',
-                                  name='Baseline',
-                                  marker_color='#17A2B8'))
-        fig3.update_layout(title={'text': "Actual Progress vs Planned", 'x': 0.5}, paper_bgcolor="#fbfff0",
-                           plot_bgcolor="#fbfff0", font={'color': "#008080", 'size': 12, 'family': "Georgia"}, height=220,
-                           width=540,
-                           legend=dict(orientation="h",
-                                       yanchor="top",
-                                       y=0.99,
-                                       xanchor="left",
-                                       x=0.01),
-                           margin=dict(l=1, r=1, b=1, t=30))
-        fig3.update_xaxes(showline=True, linewidth=1, linecolor='#F7F7F7', mirror=True, nticks=6, rangemode="tozero",
-                          showgrid=False, gridwidth=0.5, gridcolor='#F7F7F7')
-        fig3.update_yaxes(showline=True, linewidth=1, linecolor='#F7F7F7', mirror=True, nticks=10, rangemode="tozero",
-                          showgrid=True, gridwidth=0.5, gridcolor='#F7F7F7')
-        fig3.layout.yaxis.tickformat = ',.0%'
-        st.plotly_chart(fig3)
-    with col7:
-        st.write("")
+# ### Block 5#########################################################################################
+# with st.beta_container():
+#     col1, col2, col3, col4, col5, col6, col7 = st.beta_columns([1,10,1,10,1,20,1])
+#     with col1:
+#         st.write("")
+#     with col2:
+#         st.markdown(html_card_header4, unsafe_allow_html=True)
+#         x = ['Actual', 'Previous', 'Average', 'Planned']
+#         y = [5.5, 4.2, 6.3, 8.5]
+#         fig_m_prog = go.Figure([go.Bar(x=x, y=y, text=y, textposition='auto')])
+#         fig_m_prog.update_layout(paper_bgcolor="#fbfff0", plot_bgcolor="#fbfff0",
+#                                  font={'color': "#008080", 'family': "Arial"}, height=100, width=250,
+#                                  margin=dict(l=15, r=1, b=4, t=4))
+#         fig_m_prog.update_yaxes(title='y', visible=False, showticklabels=False)
+#         fig_m_prog.update_traces(marker_color='#17A2B8', selector=dict(type='bar'))
+#         st.plotly_chart(fig_m_prog)
+#         st.markdown(html_card_footer4, unsafe_allow_html=True)
+#     with col3:
+#         st.write("")
+#     with col4:
+#         st.markdown(html_card_header5, unsafe_allow_html=True)
+#         x = ['Δ vs Prev', 'Δ vs Aver', 'Δ vs Plan']
+#         y = [10, 12, 8]
+#         fig_m_hh = go.Figure([go.Bar(x=x, y=y, text=y, textposition='auto')])
+#         fig_m_hh.update_layout(paper_bgcolor="#fbfff0", plot_bgcolor="#fbfff0",
+#                                font={'color': "#008080", 'family': "Arial"}, height=100, width=250,
+#                                margin=dict(l=15, r=1, b=1, t=1))
+#         fig_m_hh.update_yaxes(title='y', visible=False, showticklabels=False)
+#         fig_m_hh.update_traces(marker_color='#17A2B8', selector=dict(type='bar'))
+#         st.plotly_chart(fig_m_hh)
+#         st.markdown(html_card_footer5, unsafe_allow_html=True)
+#     with col5:
+#         st.write("")
+#     with col6:
+#         y = data.loc[data.Activity_name == 'Total']
+#         # Create traces
+#         fig3 = go.Figure()
+#         fig3.add_trace(go.Scatter(x=y['Date'], y=y['Progress'],
+#                                   mode='lines',
+#                                   name='Progress',
+#                                   marker_color='#FF4136'))
+#         fig3.add_trace(go.Scatter(x=y['Date'], y=y['Baseline'],
+#                                   mode='lines',
+#                                   name='Baseline',
+#                                   marker_color='#17A2B8'))
+#         fig3.update_layout(title={'text': "Actual Progress vs Planned", 'x': 0.5}, paper_bgcolor="#fbfff0",
+#                            plot_bgcolor="#fbfff0", font={'color': "#008080", 'size': 12, 'family': "Georgia"}, height=220,
+#                            width=540,
+#                            legend=dict(orientation="h",
+#                                        yanchor="top",
+#                                        y=0.99,
+#                                        xanchor="left",
+#                                        x=0.01),
+#                            margin=dict(l=1, r=1, b=1, t=30))
+#         fig3.update_xaxes(showline=True, linewidth=1, linecolor='#F7F7F7', mirror=True, nticks=6, rangemode="tozero",
+#                           showgrid=False, gridwidth=0.5, gridcolor='#F7F7F7')
+#         fig3.update_yaxes(showline=True, linewidth=1, linecolor='#F7F7F7', mirror=True, nticks=10, rangemode="tozero",
+#                           showgrid=True, gridwidth=0.5, gridcolor='#F7F7F7')
+#         fig3.layout.yaxis.tickformat = ',.0%'
+#         st.plotly_chart(fig3)
+#     with col7:
+#         st.write("")
 
-html_br="""
-<br>
-"""
-st.markdown(html_br, unsafe_allow_html=True)
+# html_br="""
+# <br>
+# """
+# st.markdown(html_br, unsafe_allow_html=True)
 
 # html_card_header6="""
 # <div class="card">
