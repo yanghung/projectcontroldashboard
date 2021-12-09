@@ -14,8 +14,8 @@ html_header="""
 <meta name="author" content="Larry Prato">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<h1 style="font-size:300%; color:#008080; font-family:Georgia"> PROJECT CONTROL <br>
- <h2 style="color:#008080; font-family:Georgia"> DASHBOARD</h3> <br>
+<h1 style="font-size:300%; color:#008080; font-family:Georgia"> SORTLY <br>
+ <h2 style="color:#008080; font-family:Georgia"> Exec Dashboard</h3> <br>
  <hr style= "  display: block;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -24,7 +24,7 @@ html_header="""
   border-style: inset;
   border-width: 1.5px;"></h1>
 """
-st.set_page_config(page_title="Project Control Dashboard", page_icon="", layout="wide")
+st.set_page_config(page_title="Sortly Executive Dashboard", page_icon="", layout="wide")
 st.markdown('<style>body{background-color: #fbfff0}</style>',unsafe_allow_html=True)
 st.markdown(html_header, unsafe_allow_html=True)
 st.markdown(""" <style>
@@ -81,6 +81,7 @@ html_card_footer3="""
   </div>
 </div>
 """
+
 ### Block 1#########################################################################################
 with st.beta_container():
     col1, col2, col3, col4, col5, col6, col7 = st.beta_columns([1,15,1,15,1,15,1])
